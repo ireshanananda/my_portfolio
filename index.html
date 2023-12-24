@@ -2,117 +2,392 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ireshan's Portfolio</title>
-    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ireshan's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
-    <header>
-        <div class="portfolio-container">
-            <div class="portfolio-row header-wrap">
-                <div class="brand-name">
-                    <a href="#" class="logo">Ireshan Ananda</a>
-                </div>
-                <div class="hamburger">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <div class="portfolio-navbar">
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Resume</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+  <nav id="desktop-nav">
+    <div class="logo">Ireshan Ananda</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Ireshan Ananda</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Ireshan profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Ireshan Ananda </h1>
+      <p class="section__text__p2">Mobile Application & Web Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/CV_IreshanAnanda.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/ireshan-ananda-b18325203/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/ireshanananda'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>1+ years <br />Mobile Application & Web Development</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>BSc (Hons) in Computing & Information Systems
+              Sabaragamuwa University of Sri Lanka<br />Royal College Wayamba, Kurunegala
+            </p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/work experience.png" alt="Work Experience icon" class="icon" />
+            <h3>Working Experience</h3>
+            <p>Bank of Ceylon - Super Grade Branch, Kurunegala <br />Worked as a trainee in Customer Service
+              <b>Duration: March - December 2019</b>
+            </p>
+          </div>
         </div>
-    </header>
-    <section id="slide-carousel">
-        <div class="slider">
-            <div class="portfolio-container">
-                <div class="slider-content">
-                    <div class="slider-general">
-                        <span class="welcome-msg">
-                            Welcome !
-                        </span>
-                        <div class="welcome-text">
-                            <h1>
-                                Hi, I am
-                            </h1>
-                            <div class="text-wrap">
-                                <h2 class="main-title">Ireshan Ananda</h2>
-                                <h2 class="hover-title">Ireshan Ananda</h2>
-                            </div>
-                            <p>
-                                I am an enthusiastic, hardworking, and ambitious undergraduate with a passion for the IT industry with good communication and interpersonal skills. I'm well determined to work under pressured situations and bear the ability to face the changing working environment.
-                            </p>
-                            <div class="download-resume">
-                                <a href="CV_IreshanAnanda.pdf" target="_blank">
-                                    Download CV
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-image">
-                        <div class="welcome-image">
-                            <img src="image/image.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="text-container">
+          <p>
+            I am an enthusiastic, hardworking, and ambitious undergraduate with a passion for the IT industry with good
+            communication and interpersonal skills. I'm well determined to work under pressured situations and bear the
+            ability to face the changing working environment.
+          </p>
         </div>
-    </section>
-    <section id="contact">
-        <div class="portfolio-container">
-            <div class="text-wrap">
-                <h2 class="main-title">Stay Connceted</h2>
-                <h2 class="hover-title">Stay Connceted</h2>
-            </div>
-            <div class="contact-info">
-                <span>
-                    59/1, Jambugahamulawatta, Bandawa, Polgahawela, Sri Lanka
-                </span>
-                <h3>ireshanananda@gmail.com</h3>
-                <a href="#">
-                    + 94 78 807 2914
-                </a>
-            </div>
-            <div class="social-link">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/ireshan.ananda.5?mibextid=ZbWKwL">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com/ireshanananda?igshid=ZDdkNTZiNTM=">Instagram</a>
-                    </li>
-                    <li>
-                        <a href="https://youtube.com/@ireshanananda?si=bCvxXdO9S9qraLlj">YouTube</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/ireshan-ananda-b18325203/">LinkedIn</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/ireshanananda">GitHub</a>
-                    </li>
-                </ul>
-            </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Programming Languages</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Dart</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>PHP</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Java</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        hamburger.addEventListener("click", function () {
-            document.querySelector(".portfolio-navbar").classList.toggle("show");
-        });
-    </script>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frameworks</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Flutter</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Bootstrap</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Laravel</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Databases</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Firebase</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>MySQL</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Tools</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>VSCode</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Android Studio</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>GitHub</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Trello</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Figma</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Adobe XD</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Photoshop</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Filmora</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Key</p>
+    <h1 class="title">Projects</h1>
+    <div class="project-details-container">
+      <div class="project-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            Interest Calculator - (Individual Project)</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/ireshanananda/interest_calculator_flutter'">
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">E-Bus Tracking System - (Group Project)</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/SLMRukais99/e_bus_tracker'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://drive.google.com/file/d/1AbupUUljFmhSNGUs3Pye2Gon66hOh4Gv/view?usp=drive_link'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Restaurent Management System - (Group Project)</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/deelaka99/Restaurent_Management_System'">
+              Github
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="project-details-container">
+      <div class="project-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-4.png" alt="Project 4" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">College Automation System - (Group Project)</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/ireshanananda/IAS-project-College-Automation-System-'">
+              Github
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-5.png" alt="Project 5" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">SpaceBook - (Group Project)</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://drive.google.com/drive/folders/1fghh4CqUSilcx97bsY0cJs3i0JWtjoOR?usp=sharing'">
+              XD Design
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:ireshanananda@gmail.com">Gmail</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/facebook.png" alt="Facebook icon" class="icon contact-icon" />
+        <p><a href="https://www.facebook.com/ireshan.ananda.5?mibextid=ZbWKwL">Facebook</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/instagram.png" alt="Instagram icon" class="icon contact-icon" />
+        <p><a href="https://instagram.com/ireshanananda?igshid=ZDdkNTZiNTM=">Instagram</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/youtube.png" alt="YouTube icon" class="icon contact-icon" />
+        <p><a href="https://youtube.com/@ireshanananda?si=bCvxXdO9S9qraLlj">YouTube</a></p>
+      </div>
+    </div>
+    <div class="contact-info-container">
+        <img src="./assets/home.png" alt="Home icon" class="icon contact-icon" />
+        <b>59/1, Jambugahamulawatta, Bandawa, Polgahawela
+    </div>
+    <div class="contact-info-container">  
+        <img src="./assets/phone.png" alt="Phone icon" class="icon contact-icon" />
+        <b>+ 94 78 807 2914 <br> + 94 77 241 4651
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2023 Ireshan Ananda. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
