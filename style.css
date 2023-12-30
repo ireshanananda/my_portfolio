@@ -374,6 +374,13 @@ article .icon {
   display: flex;
 }
 
+.project-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin-bottom: 2rem;
+}
+
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
@@ -386,7 +393,7 @@ article .icon {
 }
 
 .project-title {
-  margin: 1rem;
+  margin: 0.5rem;
   color: black;
 }
 
